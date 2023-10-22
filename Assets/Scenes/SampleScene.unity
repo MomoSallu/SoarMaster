@@ -152,7 +152,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e42e43c42acb81043987b70995f4b056, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obstacle: {fileID: 3896404831996523105, guid: 8b5d09d216dbd354fb28332e8bca1ece, type: 3}
+  obstacle: {fileID: 8750435329056859916, guid: 28b8fe9d7a849384c9f34e56b7aa4df0, type: 3}
+  obstacleSpawnTimer: 2.5
+  heightOffset: 4
 --- !u!4 &198897396
 Transform:
   m_ObjectHideFlags: 0
@@ -162,7 +164,7 @@ Transform:
   m_GameObject: {fileID: 198897394}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10, y: -0.97, z: 0.0283451}
+  m_LocalPosition: {x: 23.47, y: 0, z: 0.0283451}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -342,8 +344,8 @@ Transform:
   m_GameObject: {fileID: 2094903511}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.03, y: -0.02, z: 0}
-  m_LocalScale: {x: 0.70497817, y: 0.70497817, z: 0.70497817}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.8}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -388,7 +390,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myRigidBody: {fileID: 2094903514}
-  jumpStrength: 5
+  jumpStrength: 4
 --- !u!95 &2094903517
 Animator:
   serializedVersion: 5
