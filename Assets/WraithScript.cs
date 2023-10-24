@@ -24,6 +24,12 @@ public class WraithScript : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && playerIsAlive) {      
             myRigidBody.velocity = Vector2.up * jumpStrength;
         }
+        
+        if(transform.position.y < -6 || transform.position.y > 6)
+        {
+            playerIsAlive = false;  
+            logic.GameOver();
+        }    
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {

@@ -11,6 +11,7 @@ public class ScoreColliderScript : MonoBehaviour
     void Start()
     {
         logic = GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicScript>();
+        wraith = GameObject.FindGameObjectWithTag("Player").GetComponent<WraithScript>();
     }
 
     // Update is called once per frame
@@ -20,7 +21,7 @@ public class ScoreColliderScript : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.layer == 3)
+        if ((collision.gameObject.layer == 3) && wraith.playerIsAlive)
         {
             logic.addScore(1);
         }
