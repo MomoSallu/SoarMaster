@@ -6,7 +6,7 @@ using UnityEngine;
 public class ScoreColliderScript : MonoBehaviour
 {
     // Start is called before the first frame update
-
+    public WraithScript wraith;
     public LogicScript logic;
     void Start()
     {

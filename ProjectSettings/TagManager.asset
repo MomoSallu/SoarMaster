@@ -12,7 +12,7 @@ TagManager:
   - Wraith
   - Water
   - UI
-  - 
+  - Background
   - 
   - 
   - 
@@ -39,6 +39,12 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 158243031
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Player
+    uniqueID: 4245445787
     locked: 0
