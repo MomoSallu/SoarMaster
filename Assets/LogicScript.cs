@@ -11,7 +11,8 @@ public class LogicScript : MonoBehaviour
     public GameObject GameOverScreen;
     public AudioSource gameSound;
     public AudioClip deathSound;
-    public bool deathSoundPlayed = false; 
+    public bool deathSoundPlayed = false;
+    public Animator animator;
 
     [ContextMenu("Increase Score")]
     public void addScore(int scoreAddition) {
@@ -22,6 +23,7 @@ public class LogicScript : MonoBehaviour
     public void GameOver() { 
         GameOverScreen.SetActive(true);
         if (!deathSoundPlayed) {
+            animator.SetBool("isDead", true);
             gameSound.PlayOneShot(deathSound);
             deathSoundPlayed = true;    
         }

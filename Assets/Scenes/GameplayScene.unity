@@ -1531,6 +1531,7 @@ MonoBehaviour:
   gameSound: {fileID: 1676752519}
   deathSound: {fileID: 8300000, guid: f67f16d86ea79c247864f2c6ff8f29d1, type: 3}
   deathSoundPlayed: 0
+  animator: {fileID: 2094903517}
 --- !u!4 &1676752518
 Transform:
   m_ObjectHideFlags: 0
@@ -1558,7 +1559,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 3388dfb821c063440a013f2f1276533b, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0
