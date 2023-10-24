@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,17 +9,21 @@ public class LogicScript : MonoBehaviour
     public int playerScore;
     public Text scoreText;
     public GameObject GameOverScreen;
-    public AudioSource scoreSound;
-    public AudioSource deathSound;
+    public AudioSource gameSound;
+    public AudioClip deathSound;
+    public bool deathSoundPlayed = false; 
 
     [ContextMenu("Increase Score")]
     public void addScore(int scoreAddition) {
         playerScore += scoreAddition;
         scoreText.text = playerScore.ToString();
-        scoreSound.Play();  
+        gameSound.Play(); 
     }
     public void GameOver() { 
         GameOverScreen.SetActive(true);
-        deathSound.Play();
+        if (!deathSoundPlayed) {
+            gameSound.PlayOneShot(deathSound);
+            deathSoundPlayed = true;    
+        }
     }
 }
