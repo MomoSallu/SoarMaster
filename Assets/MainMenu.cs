@@ -5,6 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    public LogicScript logic;
+    void Start() {
+        logic = GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicScript>();
+    }
     public void PlayGame() {
         SceneManager.LoadScene("GameplayScene");
     }
@@ -15,5 +19,6 @@ public class MainMenu : MonoBehaviour
     }
     public void ResetScore() {
         PlayerPrefs.DeleteKey("HighScore");
+        logic.highScoreText.text = PlayerPrefs.GetInt("HighScore", 0).ToString();
     }
 }
