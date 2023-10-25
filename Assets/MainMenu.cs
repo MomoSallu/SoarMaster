@@ -19,6 +19,7 @@ public class MainMenu : MonoBehaviour
     }
     public void ResetScore() {
         PlayerPrefs.DeleteKey("HighScore");
-        logic.highScoreText.text = PlayerPrefs.GetInt("HighScore", 0).ToString();
+        logic.playerScore = 0;  
+        logic.highScoreText.text = "0";
     }
 }

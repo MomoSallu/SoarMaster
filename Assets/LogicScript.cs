@@ -21,7 +21,7 @@ public class LogicScript : MonoBehaviour
     }
     [ContextMenu("Increase Score")]
     public void highScoreCheck() {
-        if (playerScore > PlayerPrefs.GetInt("HighScore", 0))
+        if (PlayerPrefs.GetInt("HighScore", 0) < playerScore)
         {
             PlayerPrefs.SetInt("HighScore", playerScore);
             highScoreText.text = playerScore.ToString();
@@ -35,7 +35,7 @@ public class LogicScript : MonoBehaviour
     }
     public void GameOver() { 
         GameOverScreen.SetActive(true);
-        highScoreCheck() ;  
+        highScoreCheck();  
         if (!deathSoundPlayed) {
             animator.SetBool("isDead", true);
             gameSound.PlayOneShot(deathSound);
